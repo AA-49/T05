@@ -43,17 +43,39 @@ const createPieChart = (data) => {
         .style("stroke-width", "2px")
         .style("opacity", 0.8);
 
-    // Add labels for each tech
+    // Add labels for each tech and percentage
     svg.selectAll('text')
         .data(data_ready)
         .join('text')
-        .text(d => d.data["Screen Tech"])
+        .text(d => {
+            const percent = ((d.data.Mean / d3.sum(data, d => d.Mean)) * 100).toFixed(1);
+            return `${d.data["Screen Tech"]}\n${percent}%`;
+        })
         .attr("transform", d => {
-            const pos = d3.arc().innerRadius(0).outerRadius(radius).centroid(d);
+            const pos = d3.arc().innerRadius(0).outerRadius(radius * 0.7).centroid(d);
             return `translate(${pos[0]},${pos[1]})`;
         })
         .style("text-anchor", "middle")
         .style("font-size", "13px")
         .style("font-weight", "bold")
         .style("fill", "#333");
+
+    // Add legend
+    const legend = svg.append("g")
+        .attr("transform", `translate(-${width/2 - 10},-${height/2 - 10})`);
+
+    techs.forEach((tech, i) => {
+        legend.append("rect")
+            .attr("x", 0)
+            .attr("y", i * 22)
+            .attr("width", 18)
+            .attr("height", 18)
+            .attr("fill", color(tech));
+        legend.append("text")
+            .attr("x", 25)
+            .attr("y", i * 22 + 13)
+            .text(tech)
+            .style("font-size", "13px")
+            .attr("fill", "#333");
+    });
 }
