@@ -4,12 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T05 - Multi-chart webpage</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/scatter-plot.js"></script>
+    <script src="js/line-chart.js"></script>
+    <script src="js/bar-chart.js"></script>
+    <script src="js/pie-chart.js"></script>
 </head>
 <body>
     <div class="title">
         <h1>D3 Charts Dashboard</h1>
         <p>TV Power Consumption</p>
     </div>
+    <div id="chart-area">
+        <div id="scatter-chart" class="chart">
+            <h2>Scatter Plot</h2>
+            <p>TV Energy</p>
+            <div class="responsive-svg-container">
+                <div id="scatter-plot"></div>
+            </div>
+
+        </div>
+        <div class="chart">
+            <h2>Line Chart</h2>
+            <p>ARE Spot Prices</p>
+            <div class="responsive-svg-container">
+                <div id="line-chart"></div>
+            </div>
+
+        </div>
+        <div class="chart">
+            <h2>Bar Chart</h2>
+            <p>TV energy All sizes by Screen Type</p>
+            <div class="responsive-svg-container">
+                <div id="bar-chart" ></div>
+            </div>
+
+        </div>
+        <div id="pie-chart" class="chart">
+            <h2>Pie Chart</h2>
+            <p>TV energy 55 inch tv by Screen Type</p>
+            <div class="responsive-svg-container">
+                <div id="pie-chart" ></div>
+            </div>
+
+        </div>
 </body>
 </html>
