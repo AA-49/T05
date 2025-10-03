@@ -1,0 +1,20 @@
+/* styles.css */
+.title {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.title h1 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+}
+.title p {
+    margin: 0;
+    color: #555;
+    font-size: 1.2em;
+}
