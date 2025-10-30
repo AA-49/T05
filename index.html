@@ -3,51 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T05 - Multi-chart webpage</title>
+    <title>D3 Charts Dashboard</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="js/scatter-plot.js"></script>
-    <script src="js/line-chart.js"></script>
-    <script src="js/bar-chart.js"></script>
-    <script src="js/pie-chart.js"></script>
+
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+
+    <!-- Chart Scripts -->
+    <script src="js/scatter-plot.js" defer></script>
+    <script src="js/line-chart.js" defer></script>
+    <script src="js/bar-chart.js" defer></script>
+    <script src="js/pie-chart.js" defer></script>
 </head>
 <body>
-    <div class="title">
+    <header class="title">
         <h1>D3 Charts Dashboard</h1>
-        <p>TV Power Consumption</p>
-    </div>
-    <div id="chart-area">
-        <div id="scatter-chart" class="chart">
+        <p>TV Power Consumption Analysis</p>
+    </header>
+
+    <main id="chart-area">
+        <section id="scatter-chart" class="chart">
             <h2>Scatter Plot</h2>
-            <p>TV Energy</p>
+            <p>TV Energy Efficiency</p>
             <div class="responsive-svg-container">
                 <div id="scatter-plot"></div>
             </div>
+        </section>
 
-        </div>
-        <div class="chart">
+        <section id="line-chart-section" class="chart">
             <h2>Line Chart</h2>
             <p>ARE Spot Prices</p>
             <div class="responsive-svg-container">
                 <div id="line-chart"></div>
             </div>
+        </section>
 
-        </div>
-        <div class="chart">
+        <section id="bar-chart-section" class="chart">
             <h2>Bar Chart</h2>
-            <p>TV energy All sizes by Screen Type</p>
+            <p>Energy Consumption by Screen Type</p>
             <div class="responsive-svg-container">
-                <div id="bar-chart" ></div>
+                <div id="bar-chart"></div>
             </div>
+        </section>
 
-        </div>
-        <div class="chart">
+        <section id="pie-chart-section" class="chart">
             <h2>Pie Chart</h2>
-            <p>TV energy 55 inch tv by Screen Type</p>
+            <p>55-inch TVs by Screen Type</p>
             <div class="responsive-svg-container">
-                <div id="pie-chart" ></div>
+                <div id="pie-chart"></div>
             </div>
+        </section>
+    </main>
 
-        </div>
+    <footer>
+        <p>© 2025 D3 Visualization Project</p>
+    </footer>
 </body>
 </html>
