@@ -3,9 +3,9 @@ d3.csv("data/Ex5_ARE_Spot_Prices.csv").then(data => {
 });
 
 const createLineChart = (data) => {
-    const margin = {top: 20, right: 80, bottom: 50, left: 60};
-    const width = 800;
-    const height = 400;
+    const margin = {top: 50, right: 150, bottom: 50, left: 150};
+    const width = 900;
+    const height = 450;
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
